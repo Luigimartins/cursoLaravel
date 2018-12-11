@@ -9,7 +9,7 @@
 
         <div class="row">
         @foreach($cursos as $curso)
-            @if($curso->publicado=="sim")
+            
             <div class="col s12 m4">
               <div class="card">
                 <div class="card-image">
@@ -19,18 +19,32 @@
                 <div class="card-content">
                   <h4>{{$curso->titulo}}</h4>
                   <p>{{$curso->descricao}}</p>
-                  @foreach($users as $user)
+                  
+                  <!-- //COM OUTRO FOREACH -->
+                   @foreach($users as $user)
                     @if($user->id == $curso->user_id)
                       <p>Autor: {{$user->name}}</p>
                     @endif
-                  @endforeach  
+                  @endforeach
+
+
+                  <!-- //SEM OUTRO FOREACH -->
+                  <?php 
+                    $user = $users->where('id', '=', $curso->user_id);
+                    echo $user;
+
+                  ?>
+
+                  
+
+
                 </div>
                 <div class="card-action">
                   <a href="#">Ver mais</a>
                 </div>
               </div>
             </div>
-            @endif
+            
         @endforeach 
           </div>
         

@@ -11,7 +11,8 @@ class CursoController extends Controller
 {
     public 	function index()
     {
-    	$registros = Curso::all();
+    	$registros = Curso::where('user_id','=',Auth::user()->id)->get();
+        // dd($registros);
     	return view('admin.cursos.index', compact('registros'));
     }
 

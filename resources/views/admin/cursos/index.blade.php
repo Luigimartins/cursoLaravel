@@ -19,7 +19,7 @@
 				</thead>
 				<tbody>
 					@foreach($registros as $registro)
-					@if($registro['user_id'] == Auth::user()->id)
+					
 					<tr>
 						<td>{{$registro->id}}</td>
 						<td>{{$registro->titulo}}</td>
@@ -31,7 +31,7 @@
 							<a class="btn red" href="{{ route('admin.cursos.deletar', $registro->id) }}">Deletar</a>
 						</td>
 					</tr>
-					@endif
+					
 					@endforeach
 				</tbody>
 			</table>

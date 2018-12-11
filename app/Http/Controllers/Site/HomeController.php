@@ -11,7 +11,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-    	$cursos = Curso::all();
+    	$cursos = Curso::where('publicado','=','sim')->get();
     	$users = User::all();
     	return view('home', compact('cursos','users'));
     }
