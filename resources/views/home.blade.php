@@ -29,11 +29,6 @@
 
 
                   <!-- //SEM OUTRO FOREACH -->
-                  <?php 
-                    $user = $users->where('id', '=', $curso->user_id);
-                    echo $user;
-
-                  ?>
 
                   
 
