@@ -9,7 +9,7 @@ $(document).ready(function(){
 
       	
 </script>
-	<footer class="page-footer" style="margin-top: 100px;">
+	<footer class="page-footer blue-grey" style="margin-top: 100px;">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">

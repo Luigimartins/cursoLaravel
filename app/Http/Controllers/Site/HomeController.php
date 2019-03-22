@@ -15,4 +15,10 @@ class HomeController extends Controller
     	$users = User::all();
     	return view('home', compact('cursos','users'));
     }
+
+    public function ver($id)
+    {
+    	$curso = Curso::find($id);
+    	return view('list',compact('curso'));
+    }
 }

@@ -18,7 +18,7 @@ class LoginController extends Controller
     	$dados = $req->all();
 
     	if(Auth::attempt(['email'=> $dados['email'], 'password'=> $dados['senha']  ])){
-    		return redirect()->route('admin.cursos');
+    		return redirect()->route('site.home');
     	}
 
 

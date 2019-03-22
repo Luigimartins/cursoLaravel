@@ -12,7 +12,7 @@
     </head>
 	<body>
 		<header>  
-		  <nav>
+		  <nav class="blue-grey">
 		    <div class="nav-wrapper container">
 		      <a href="{{route('site.home')}}" class="brand-logo">Curso Laravel</a>
 		      <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
